@@ -15,4 +15,9 @@ describe('StringCalculator', () => {
     const calculator = new StringCalculator();
     expect(calculator.add('1,5')).toBe(6);
   });
+
+  it('should return sum for five comma-separated numbers', () => {
+    const calculator = new StringCalculator();
+    expect(calculator.add('1,5,29,88,1232')).toBe(1355);
+  });
 });
