@@ -4,13 +4,16 @@ A React TypeScript application implementing the String Calculator kata using Tes
 
 ## Project Overview
 
-This project implements a string calculator that follows the TDD kata requirements. The calculator takes a string of numbers as input and returns their sum.
+This project implements a string calculator that follows the TDD kata requirements. The calculator takes a string of numbers as input and returns their sum, with support for various delimiters and error handling.
 
 ## Features
 
 - Handle empty strings (returns 0)
 - Handle single number strings
 - Handle multiple comma-separated numbers
+- Handle newlines between numbers
+- Support custom delimiters
+- Handle negative numbers with appropriate error messages
 
 ## TDD Implementation Plan
 
@@ -33,15 +36,30 @@ The development follows the three laws of Test-Driven Development:
 3. **Multiple Numbers Test**
    - Test: Comma-separated numbers should return their sum
    - Implementation: Split string by comma and sum the numbers
+   
+4. **Newline Delimiter Test**
+   - Test: Numbers separated by newlines should be handled
+   - Implementation: Update delimiter handling to support newlines
+
+5. **Custom Delimiter Test**
+   - Test: Support for custom delimiters specified in the input
+   - Implementation: Parse delimiter from input format "//[delimiter]\n[numbers]"
+
+6. **Negative Numbers Test**
+   - Test: Negative numbers should throw an exception
+   - Implementation: Add validation and error handling for negative numbers
 
 ## Project Structure
 
 ```
 src/
 ├── components/
+│   ├── Calculator.tsx       # React component for the calculator UI
+|   └── __tests__/           # Test files for react component
+│       └── StringCalculator.test.ts
 ├── services/
 │   ├── StringCalculator.ts  # Core calculator logic
-│   └── __tests__/           # Test files
+│   └── __tests__/           # Test files for logic service
 │       └── StringCalculator.test.ts
 └── App.tsx                  # Main application component
 ```
