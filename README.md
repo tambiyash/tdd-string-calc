@@ -1,46 +1,95 @@
-# Getting Started with Create React App
+# TDD String Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React TypeScript application implementing the String Calculator kata using Test-Driven Development (TDD) principles.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+This project implements a string calculator that follows the TDD kata requirements. The calculator takes a string of numbers as input and returns their sum.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Handle empty strings (returns 0)
+- Handle single number strings
+- Handle multiple comma-separated numbers
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## TDD Implementation Plan
 
-### `npm test`
+The development follows the three laws of Test-Driven Development:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **First Law**: You are not allowed to write any production code unless it is to make a failing unit test pass.
+2. **Second Law**: You are not allowed to write any more of a unit test than is sufficient to fail; compilation failures are also considered failures.
+3. **Third Law**: You are not allowed to write any more production code than what is sufficient to pass the one failing unit test.
 
-### `npm run build`
+### Implementation Steps
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Empty String Test**
+   - Test: Empty string should return 0
+   - Implementation: Basic StringCalculator class with add method returning 0
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Single Number Test**
+   - Test: Single number string should return that number
+   - Implementation: Parse the input string to an integer
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Multiple Numbers Test**
+   - Test: Comma-separated numbers should return their sum
+   - Implementation: Split string by comma and sum the numbers
 
-### `npm run eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+src/
+├── components/
+├── services/
+│   ├── StringCalculator.ts  # Core calculator logic
+│   └── __tests__/           # Test files
+│       └── StringCalculator.test.ts
+└── App.tsx                  # Main application component
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Prerequisites
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Running the Application
+
+```
+npm start
+```
+
+### Running Tests
+
+```
+npm test
+```
+
+## Technologies Used
+
+- React
+- TypeScript
+- Jest
+- React Testing Library
+
+## TDD Benefits
+
+This project demonstrates the benefits of TDD:
+
+- **Confidence**: Each feature is backed by tests
+- **Documentation**: Tests serve as executable documentation
+- **Refactoring**: Safe refactoring with test coverage
+- **Design**: Tests drive good design decisions
+- **Regression Prevention**: Tests catch regressions early
+
+## License
+
+MIT
