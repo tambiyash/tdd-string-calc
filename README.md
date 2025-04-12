@@ -2,6 +2,9 @@
 
 A React TypeScript application implementing the String Calculator kata using Test-Driven Development (TDD) principles.
 
+![string calc](https://github.com/user-attachments/assets/c5acdbf5-376b-4620-a3c7-9dfa16a80ede)
+
+
 ## Project Overview
 
 This project implements a string calculator that follows the TDD kata requirements. The calculator takes a string of numbers as input and returns their sum, with support for various delimiters and error handling.
