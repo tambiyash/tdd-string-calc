@@ -38,10 +38,66 @@
   transition: background-color 0.2s;
 }
 
+.calculate-button:hover {
+  background-color: #0056b3;
+}
+
+.instructions {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.instructions p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.instructions ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.instructions li {
+  margin-bottom: 0.25rem;
+}
+
+.example-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+  text-align: left;
+}
+
+.example-button:hover {
+  color: #0056b3;
+}
+
+.note {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #666;
+}
+
 .result {
   margin-top: 1rem;
   padding: 1rem;
   background-color: #e8f5e9;
   border-radius: 4px;
   color: #2e7d32;
+}
+
+.error {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #ffebee;
+  border-radius: 4px;
+  color: #c62828;
 }
